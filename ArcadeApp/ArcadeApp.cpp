@@ -2,8 +2,12 @@
 //
 
 #include <iostream>
+#include <SDL.h>
+#include <stdio.h>
 
-int main()
+int main(int arg, char* args[])
 {
+    SDL_Init(SDL_INIT_EVERYTHING);
     std::cout << "Hello World!\n";
+    return 0;
 }
