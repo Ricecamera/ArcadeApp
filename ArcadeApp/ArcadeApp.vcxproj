@@ -78,6 +78,7 @@
     <LinkIncremental>true</LinkIncremental>
     <ExternalIncludePath>$(SolutionDir)\include;$(ExternalIncludePath)</ExternalIncludePath>
     <LibraryPath>$(SolutionDir)\libraries;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)\ArcadeApp\Utils;$(SolutionDir)\ArcadeApp\Shapes;$(SolutionDir)\ArcadeApp\Graphics;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -148,6 +149,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ArcadeApp.cpp" />
+    <ClCompile Include="Graphics\Color.cpp" />
+    <ClCompile Include="Graphics\Screen.cpp" />
+    <ClCompile Include="Graphics\ScreenBuffer.cpp" />
+    <ClCompile Include="Shapes\Line2D.cpp" />
+    <ClCompile Include="Utils\Utils.cpp" />
+    <ClCompile Include="Utils\Vec2D.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Graphics\Color.h" />
+    <ClInclude Include="Graphics\Screen.h" />
+    <ClInclude Include="Graphics\ScreenBuffer.h" />
+    <ClInclude Include="Shapes\Line2D.h" />
+    <ClInclude Include="Utils\Utils.h" />
+    <ClInclude Include="Utils\Vec2D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
