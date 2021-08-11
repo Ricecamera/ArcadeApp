@@ -48,3 +48,9 @@ float Triangle::Area(const Vec2D& p0, const Vec2D& p1, const Vec2D& p2) const
 {
 	return fabsf((p0.GetX() * (p1.GetY() - p2.GetY()) + p1.GetX()*(p2.GetY() - p0.GetY()) + p2.GetX()*(p0.GetY() - p1.GetY()))/2.0f);
 }
+
+void Triangle::MoveTo(const Vec2D& position)
+{
+	Vec2D offset = position - GetCenterPoint();
+	MoveBy(offset);
+}

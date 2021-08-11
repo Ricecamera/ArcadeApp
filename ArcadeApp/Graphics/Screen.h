@@ -19,6 +19,7 @@ class Line2D;
 class Triangle;
 class AARectangle;
 class Circle;
+class Star;
 struct SDL_Window;
 struct SDL_Surface;
 
@@ -42,11 +43,12 @@ public:
 	void Draw(const Triangle& triangle, const Color& color, bool fill = false, const Color& fillColor = Color::White());
 	void Draw(const AARectangle& rect, const Color& color, bool fill = false, const Color& fillColor = Color::White());
 	void Draw(const Circle& circle, const Color& color, bool fill = false, const Color& fillColor = Color::White());
+	void Draw(const Star& star, const Color& color, bool fill = false, const Color& fillColor = Color::White());
 
 private:
 
-	//Screen(const Screen& screen);
-	//Screen& operator=(const Screen& screen);
+	Screen(const Screen& screen);
+	Screen& operator=(const Screen& screen);
 
 	void ClearScreen();
 	void FillPoly(const std::vector<Vec2D>& points, const Color& color);

@@ -156,6 +156,7 @@
     <ClCompile Include="Shapes\Circle.cpp" />
     <ClCompile Include="Shapes\Line2D.cpp" />
     <ClCompile Include="Shapes\Shape.cpp" />
+    <ClCompile Include="Shapes\Star.cpp" />
     <ClCompile Include="Shapes\Triangle.cpp" />
     <ClCompile Include="Utils\Utils.cpp" />
     <ClCompile Include="Utils\Vec2D.cpp" />
@@ -168,8 +169,8 @@
     <ClInclude Include="Shapes\Circle.h" />
     <ClInclude Include="Shapes\Line2D.h" />
     <ClInclude Include="Shapes\Shape.h" />
+    <ClInclude Include="Shapes\Star.h" />
     <ClInclude Include="Shapes\Triangle.h" />
-    <ClInclude Include="Star.h" />
     <ClInclude Include="Utils\Utils.h" />
     <ClInclude Include="Utils\Vec2D.h" />
   </ItemGroup>

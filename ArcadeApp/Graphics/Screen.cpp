@@ -11,6 +11,7 @@
 #include "Line2D.h"
 #include "Triangle.h"
 #include "AARectangle.h"
+#include "Star.h";
 #include "Circle.h"
 #include "Utils.h"
 #include <SDL.h>
@@ -226,6 +227,32 @@ void Screen::Draw(const Circle& circle, const Color& color, bool fill, const Col
 	}
 
 	for (const Line2D& line : lines)
+	{
+		Draw(line, color);
+	}
+}
+
+void Screen::Draw(const Star& star, const Color& color, bool fill, const Color& fillColor) {
+	if (fill)
+	{
+		FillPoly(star.GetPoints(), fillColor);
+	}
+	std::vector<Line2D> linesToDraw;
+	std::vector<Vec2D> points = star.GetPoints();
+
+	for (int i = 1; i < 5; i++) {
+		Line2D l1 = Line2D(points[i], points[i + 5]);
+		Line2D l2 = Line2D(points[i + 1], points[i + 5]);
+		linesToDraw.push_back(l1);
+		linesToDraw.push_back(l2);
+	}
+
+	Line2D l3 = Line2D(points[5], points[10]);
+	Line2D l4 = Line2D(points[1], points[10]);
+	linesToDraw.push_back(l3);
+	linesToDraw.push_back(l4);
+
+	for (const Line2D& line : linesToDraw)
 	{
 		Draw(line, color);
 	}

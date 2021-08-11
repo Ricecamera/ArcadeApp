@@ -48,6 +48,9 @@
     <ClCompile Include="Shapes\Triangle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Shapes\Star.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Graphics\Color.h">
@@ -80,7 +83,7 @@
     <ClInclude Include="Shapes\Triangle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Star.h">
+    <ClInclude Include="Shapes\Star.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
